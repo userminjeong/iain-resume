@@ -7,6 +7,7 @@ import {convertPdfToImage} from "~/lib/pdf2img";
 import {generateUUID} from "~/lib/utils";
 import {prepareInstructions, AIResponseFormat} from "../../constants";
 
+
 const Upload = () => {
     const {isLoading, fs, ai, kv } = usePuterStore();
     const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Upload = () => {
     const [statusText, setStatusText] = useState('');
     const [file, setFile] = useState<File | null>(null);
 
-   const handleFileSelect = (file: File | null) => {
+    const handleFileSelect = (file: File | null) => {
         setFile(file)
     }
 
