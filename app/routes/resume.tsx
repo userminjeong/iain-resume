@@ -4,14 +4,14 @@ import {usePuterStore} from "~/lib/puter";
 import Summary from "~/components/feedback/Summary";
 import ATS from "~/components/feedback/ATS";
 import Details from "~/components/feedback/Details";
+
 export const meta = () => ([
-    { title: 'Resumind | Review ' },
+    { title: 'IAIN | Resume ' },
     { name: 'description', content: 'Detailed overview of your resume' },
 ])
 
-
 const Resume = () => {
-    const {isLoading, fs, kv } = usePuterStore();
+    const { isLoading, fs, kv } = usePuterStore();
     const { id } = useParams();
     const [imageUrl, setImageUrl] = useState('');
     const [resumeUrl, setResumeUrl] = useState('');
@@ -44,6 +44,7 @@ const Resume = () => {
 
         loadResume();
     }, [id]);
+
     return (
    
         <main className="!pt-0">

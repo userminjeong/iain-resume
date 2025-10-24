@@ -7,9 +7,8 @@ import {convertPdfToImage} from "~/lib/pdf2img";
 import {generateUUID} from "~/lib/utils";
 import {prepareInstructions, AIResponseFormat} from "../../constants";
 
-
 const Upload = () => {
-    const { isLoading, fs, ai, kv } = usePuterStore();
+    const {isLoading, fs, ai, kv } = usePuterStore();
     const navigate = useNavigate();
     const [isProcessing, setIsProcessing] = useState(false);
     const [statusText, setStatusText] = useState('');
@@ -78,8 +77,6 @@ const Upload = () => {
 
         handleAnalyze({ companyName, jobTitle, jobDescription, file });
     }
-
-
 
     return (
        <main className="bg-[url('/images/bg-main.svg')] bg-cover">

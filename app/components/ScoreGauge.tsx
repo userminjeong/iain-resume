@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
+
 const ScoreGauge = ({ score = 75 }: { score: number }) => {
     const [pathLength, setPathLength] = useState(0);
     const pathRef = useRef<SVGPathElement>(null);
@@ -11,6 +12,7 @@ const ScoreGauge = ({ score = 75 }: { score: number }) => {
             setPathLength(pathRef.current.getTotalLength());
         }
     }, []);
+
 
     return (
       <div className="flex flex-col items-center">
