@@ -7,8 +7,9 @@ import {convertPdfToImage} from "~/lib/pdf2img";
 import {generateUUID} from "~/lib/utils";
 import {prepareInstructions, AIResponseFormat} from "../../constants";
 
+
 const Upload = () => {
-    const {isLoading, fs, ai, kv } = usePuterStore();
+    const { isLoading, fs, ai, kv } = usePuterStore();
     const navigate = useNavigate();
     const [isProcessing, setIsProcessing] = useState(false);
     const [statusText, setStatusText] = useState('');
@@ -48,7 +49,7 @@ const Upload = () => {
 
         const feedback = await ai.feedback(
             uploadedFile.path,
-            prepareInstructions({ jobTitle, jobDescription, AIResponseFormat})
+            prepareInstructions({ jobTitle, jobDescription, AIResponseFormat })
         )
         if (!feedback) return setStatusText('Error: Failed to analyze resume');
 
@@ -77,6 +78,8 @@ const Upload = () => {
 
         handleAnalyze({ companyName, jobTitle, jobDescription, file });
     }
+
+
 
     return (
        <main className="bg-[url('/images/bg-main.svg')] bg-cover">
